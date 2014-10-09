@@ -7,7 +7,7 @@
 FROM ubuntu:trusty
 
 # File Author / Maintainer
-MAINTAINER Maintaner Name
+MAINTAINER Andrew Kirwan
 
 # Add the application resources URL
 RUN echo "deb http://ie.archive.ubuntu.com/ubuntu/ trusty main universe" >> /etc/apt/sources.list
