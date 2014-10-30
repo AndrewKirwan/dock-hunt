@@ -1,10 +1,17 @@
 from flask import Flask
 from flask import request
+from os import listdir
+from os.path import isfile, join
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
     return "Hello World!"
+
+@app.route("/list")
+def listfiles():
+	filelist = [f for f in listdir(mypath) if isfile(join(mypath,f)) ]
+	return(filelist)
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
